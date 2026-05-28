@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche d'Orientation Complète 2026 | Timkademy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0F172A; /* Bleu nuit profond */
+            --primary-light: #1E293B; /* Bleu secondaire */
+            --accent-amber: #F59E0B; /* Ambre / Or */
+            --accent-hover: #D97706;
+            --bg-light: #F8FAFC;
+            --text-dark: #0F172A;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --focus-ring: 0 0 0 3px rgba(245, 158, 11, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Barre de navigation */
+        .navbar {
+            background-color: var(--primary-dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-amber);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .navbar-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .navbar-title {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar-title span {
+            color: var(--accent-amber);
+        }
+
+        /* Section Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 5rem 2rem 7rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #E2E8F0;
+            font-weight: 300;
+        }
+
+        /* Bannière de Statistiques Flottante */
+        .stats-banner {
+            background-color: white;
+            max-width: 1000px;
+            margin: -4rem auto 3rem auto;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 10;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-number span {
+            color: var(--accent-amber);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Conteneur principal du Formulaire */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem 2rem;
+        }
+
+        form {
+            background: transparent;
+        }
+
+        /* Sections / Cartes du Formulaire */
+        .form-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 0.75rem;
+        }
+
+        .section-number {
+            background-color: var(--primary-dark);
+            color: var(--accent-amber);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Grilles de champs */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .form-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            transition: all 0.2s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-amber);
+            background-color: white;
+            box-shadow: var(--focus-ring);
+        }
+
+        /* Boutons Radio & Checkboxes Modernes */
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-label, .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: var(--accent-amber);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Grille adaptative pour les cases à cocher */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-card {
+            background-color: var(--bg-light);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .checkbox-card:hover {
+            border-color: var(--accent-amber);
+            background-color: #FFFBEB;
+        }
+
+        /* Section réservée à l'équipe */
+        .team-only {
+            border: 2px dashed #0284C7;
+            background-color: #F0F9FF;
+        }
+
+        .team-only .section-number {
+            background-color: #0284C7;
+            color: white;
+        }
+
+        .team-only h2 {
+            color: #0369A1;
+        }
+
+        /* Zone de signature */
+        .signature-area {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-light);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Bouton Soumettre */
+        .submit-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .btn-submit {
+            background-color: var(--accent-amber);
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 3.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 20px -3px rgba(217, 119, 6, 0.4);
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 4px solid var(--accent-amber);
+        }
+
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-info {
+            font-size: 0.9rem;
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .footer-credits {
+            font-size: 0.85rem;
+            color: #64748B;
+            border-top: 1px solid #1E293B;
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-grid, .form-grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+            .stats-banner {
+                margin: -2rem 1rem 2rem 1rem;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 1rem;
+            }
+            .stat-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            .form-section {
+                padding: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="LOGO_TIMKADEMY _COMP.png" alt="Timkademy Logo" class="navbar-logo">
+            <div class="navbar-title">TIM<span>KADEMY</span></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Fiche d'Orientation Académique & Professionnelle</h1>
+        <p>« Chez Timkademy, nous pensons que l’éducation des enfants doit être considérée comme un projet de grande envergure, au même titre que les grands projets nationaux. »</p>
+    </header>
+
+    <section class="stats-banner">
+        <div class="stat-item">
+            <div class="stat-number">Salon <span>2026</span></div>
+            <div class="stat-label">Lycée Kodonso</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100<span>%</span></div>
+            <div class="stat-label">Orientation & Mentorat</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">Mali<span>/</span>Afrique</div>
+            <div class="stat-label">Jeunesse Préparée & Confiante</div>
+        </div>
+    </section>
+
+    <main class="container">
+        <form action="https://formsubmit.co/contact.timkademy@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nouvelle Fiche d'Orientation Complète - Salon 2026">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-section">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <h2>Informations Générales de l'Élève</h2>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="id_eleve">Identifiant Élève (Format : TKD-2026-XXXX)</label>
+                        <input type="text" id="id_eleve" name="ID_Eleve" placeholder="Laisser vide ou saisir l'ID donné">
+                    </div>
+                    <div class="form-group">
+                        <label for="date_enr">Date d'enregistrement</label>
+                        <input type="date" id="date_enr" name="Date_Enregistrement" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="nom_complet">Nom et Prénom de l'élève</label>
+                        <input type="text" id="nom_complet" name="Nom_Complet_Eleve" placeholder="Ex : Amadou Toumani Touré" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Sexe</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="Sexe" value="Masculin" required> Masculin</label>
+                            <label class="radio-label"><input type="radio" name="Sexe" value="Féminin"> Féminin</label>
+                        </div>
+                    </div>
+                    <div class="form-grid-3 full-width">
+                        <div class="form-group">
+                            <label for="date_naiss">Date de naissance</label>
+                            <input type="date" id="date_naiss" name="Date_Naissance">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Âge</label>
+                            <input type="number" id="age" name="Age" min="10" max="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="classe">Classe / Niveau</label>
+                            <input type="text" id="classe" name="Classe_Niveau" placeholder="Ex: Terminale, 11ème, etc." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="serie">Série / Filière</label>
+                        <input type="text" id="serie" name="Serie_Filiere" placeholder="Ex : TSE, TLL, TSS, Génie Civil">
+                    </div>
+                    <div class="form-group">
+                        <label for="etablissement">Établissement Scolaire d'origine</label>
+                        <input type="text" id="etablissement" name="Etablissement_Scolaire" placeholder="Ex : Lycée Kodonso" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp_eleve">Téléphone / WhatsApp Élève</label>
+                        <input type="text" id="whatsapp_eleve" name="WhatsApp_Eleve" placeholder="Ex : 70000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_eleve">Email Élève (si disponible)</label>
+                        <input type="email" id="email_eleve" name="Email_Eleve" placeholder="Ex : eleve@gmail.com">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="quartier">Ville / Quartier de résidence</label>
+                        <input type="text" id="quartier" name="Quartier_Residence" placeholder="Ex : Bamako, Badalabougou" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <h2>Informations Parents / Tuteurs</h2>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nom_parent">Nom complet du parent / tuteur</label>
+                        <input type="text" id="nom_parent" name="Nom_Parent" placeholder="Ex : Ousmane Traoré" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lien_parent">Lien avec l'élève</label>
+                        <select id="lien_parent" name="Lien_Parente" required>
+                            <option value="">Sélectionner...</option>
+                            <option value="Père">Père</option>
+                            <option value="Mère">Mère</option>
+                            <option value="Oncle/Tante">Oncle / Tante</option>
+                            <option value="Frère/Sœur">Frère / Sœur</option>
+                            <option value="Tuteur légal">Autre Tuteur</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel_parent">Téléphone / WhatsApp Parent</label>
+                        <input type="text" id="tel_parent" name="WhatsApp_Parent" placeholder="Ex : 60000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profession_parent">Profession du parent</label>
+                        <input type="text" id="profession_parent" name="Profession_Parent" placeholder="Ex : Enseignant, Ingénieur">
+                    </div>
+                    <div class="form-group">
+                        <label>Autorisation de contact par TIMKADEMY</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="Autorisation_Contact_Parent" value="Oui" checked> Oui, j'accepte</label>
+                            <label class="radio-label"><input type="radio" name="Autorisation_Contact_Parent" value="Non"> Non</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <h2>Profil Académique & Diagnostic</h2>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="moyenne">Moyenne générale approximative</label>
+                        <input type="text" id="moyenne" name="Moyenne_Approximative" placeholder="Ex : 14.50 / 20">
+                    </div>
+                    <div class="form-group">
+                        <label for="niveau_estime">Niveau académique estimé</label>
+                        <select id="niveau_estime" name="Niveau_Académique_Estime">
+                            <option value="Excellent">Excellent</option>
+                            <option value="Bon" selected>Bon</option>
+                            <option value="Moyen">Moyen</option>
+                            <option value="En difficulté">En difficulté</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="frequence_travail">Fréquence de travail personnel hors des cours</label>
+                        <select id="frequence_travail" name="Frequence_Travail_Personnel">
+                            <option value="Très régulière">Très régulière (Tous les jours)</option>
+                            <option value="Régulière" selected>Régulière (Plusieurs fois par semaine)</option>
+                            <option value="Rare">Rare (Uniquement avant les compositions)</option>
+                            <option value="Très faible">Très faible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 1rem;">
+                        <label>Matières préférées (Fortes) :</label>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Mathématiques"> Mathématiques</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Physique"> Physique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Chimie"> Chimie</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Informatique"> Informatique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Français"> Français</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Anglais"> Anglais</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Histoire-Géo"> Histoire / Géo</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="SVT"> SVT</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Électricité"> Électricité</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Dessin technique"> Dessin Technique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Génie Civil"> Génie Civil</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Preferees[]" value="Économie"> Économie</label></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 1rem;">
+                        <label>Matières difficiles (Faibles) :</label>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Mathématiques"> Mathématiques</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Physique"> Physique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Chimie"> Chimie</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Informatique"> Informatique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Français"> Français</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Anglais"> Anglais</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Histoire-Géo"> Histoire / Géo</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="SVT"> SVT</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Électricité"> Électricité</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Dessin technique"> Dessin Technique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Génie Civil"> Génie Civil</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Matieres_Difficiles[]" value="Économie"> Économie</label></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <h2>Projet d'Orientation & Avenir</h2>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Après le BAC, l'élève souhaite intégrer :</label>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="Université Publique"> Université Publique</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="École Privée"> École Privée</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="BTS / DUT"> BTS / DUT</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="Licence Pro"> Licence Professionnelle</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="École d'Ingénieurs"> École d'Ingénieurs</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="Formation Métier"> Formation Professionnelle</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="Études à l'étranger"> Études à l'Étranger</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="Entrepreneuriat"> Entrepreneuriat</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Souhaits_Post_Bac[]" value="Indécis"> Pas encore décidé</label></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 1rem;">
+                        <label>Filières et Domaines d'Intérêt :</label>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Génie Civil"> Génie Civil</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Informatique"> Informatique / Dev</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Intelligence Artificielle"> Intelligence Artificielle</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Réseaux & Cybersécurité"> Réseaux & Cybersécurité</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Électricité"> Électricité</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Énergies Renouvelables"> Énergies Renouvelables</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Médecine / Santé"> Médecine / Santé</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Mines & Géologie"> Mines & Géologie</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Architecture / Urbanisme"> Architecture</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Droit / Sciences Po"> Droit</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_Interet[]" value="Commerce / Marketing"> Commerce / Marketing</label></div>
+                            <div class="checkbox-card"><label class="checkbox-label"><input type="checkbox" name="Filieres_
